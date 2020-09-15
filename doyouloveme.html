@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Do you love me?</h2>
+    <button onclick="lenh()">Yes</button>
+    <button id="no" onmouseover="khongchon()" style="position: absolute; left: 7%; top: 70px; width: 37.75px;height: 22px">No</button>
+<script>
+    function lenh() {
+        alert("<3")
+    }
+    function khongchon() {
+        let w = window.innerWidth*0.9;
+        let h = window.innerHeight*0.9;
+        let a = Math.round(Math.random()*w);
+        let b = Math.round(Math.random()*h);
+        document.getElementById('no').style.left = a + 'px'
+        document.getElementById('no').style.top = b + 'px'
+        document.getElementById('no').style.bottom = (b + a) + 'px'
+        document.getElementById('no').style.right = (b - a) + 'px'
+    }
+</script>
+</body>
+</html>
